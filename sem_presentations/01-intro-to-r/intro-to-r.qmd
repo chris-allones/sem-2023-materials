@@ -698,7 +698,7 @@ arrange(data, desc(lifeExp))
 Suppose we want to know the average population by continent.
 
 ::: columns
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -716,7 +716,7 @@ data
 ```
 :::
 
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -736,21 +736,22 @@ summarise(grouped_by_continent, avg_pop = mean(pop))
 ```
 :::
 :::
-
 
 ## `group_by` and `summarise()`
 
 Suppose we want to know the average population by continent.
 
 ::: columns
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
 
 data
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -759,7 +760,7 @@ data
 ```
 :::
 
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -768,7 +769,9 @@ grouped_by_continent <- group_by(data, continent)
 summarised_data <- summarise(grouped_by_continent, avg_pop = mean(pop))
 arrange(summarised_data, desc(avg_pop))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -780,10 +783,10 @@ arrange(summarised_data, desc(avg_pop))
 :::
 :::
 
-## {transition="fade" auto-animate=true}
+##  {transition="fade" auto-animate="true"}
 
 ::: columns
-::: {.column}
+::: column
 ### Too many codes!
 
 ### It's hard to follow!
@@ -791,29 +794,23 @@ arrange(summarised_data, desc(avg_pop))
 ### It's hard to keep track of the codes!
 :::
 
-::: {.column}
-
+::: column
 ![](img/teary.gif)
-
 :::
 :::
 
+##  {transition="fade" auto-animate="true"}
 
-## {transition="fade" auto-animate=true}
-
-<center>
-<img src="https://rpodcast.github.io/officer-advrmarkdown/img/magrittr.png" style="width: 50%" />
-</center>
+<center><img src="https://rpodcast.github.io/officer-advrmarkdown/img/magrittr.png" style="width: 50%"/></center>
 
 ### `%>%` pipe operator {.center-text}
 
-
-## The` %>% `operator
+## The`%>%`operator
 
 The **`%>%`** helps your write code in a way that is easier to read and understand.
 
 ::: columns
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -822,7 +819,9 @@ grouped_by_continent <- group_by(data, continent)
 summarised_data <- summarise(grouped_by_continent, avg_pop = mean(pop))
 arrange(summarised_data, desc(avg_pop))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -833,7 +832,7 @@ arrange(summarised_data, desc(avg_pop))
 ```
 :::
 
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -843,7 +842,9 @@ data %>%
   summarise(avg_pop = mean(pop)) %>% 
   arrange(desc(avg_pop))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -856,12 +857,12 @@ data %>%
 :::
 :::
 
-## The` %>% `operator
+## The`%>%`operator
 
 What is the average life expectancy of Asian countries per year?
 
 ::: columns
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -870,10 +871,12 @@ filtered_by_asia <- filter(data, continent == "Asia")
 grouped_by_country_year <- group_by(filtered_by_asia, country, year)
 summarise(grouped_by_country_year, avg_lifeExp = mean(lifeExp))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
-#| class-output: "vscroll"
+#| class-output: "remark-code"
 
 filtered_by_asia <- filter(data, continent == "Asia")
 grouped_by_country_year <- group_by(filtered_by_asia, country, year)
@@ -881,7 +884,7 @@ summarise(grouped_by_country_year, avg_lifeExp = mean(lifeExp))
 ```
 :::
 
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -891,7 +894,9 @@ data %>%
   group_by(country, year) %>% 
   summarise(avg_lifeExp = mean(lifeExp))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -903,12 +908,11 @@ data %>%
 ```
 :::
 :::
-
 
 ## The `%>%` operator
 
 ::: columns
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -918,7 +922,9 @@ grouped_by_country <- group_by(filtered_by_asia, country)
 summarised_by_country <- summarise(grouped_by_country, avg_lifeExp = mean(lifeExp))
 arrange(summarised_by_country, desc(avg_lifeExp))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -930,7 +936,7 @@ arrange(summarised_by_country, desc(avg_lifeExp))
 ```
 :::
 
-::: {.column}
+::: column
 ```{r}
 #| echo: true
 #| eval: false
@@ -941,7 +947,9 @@ data %>%
   summarise(avg_lifeExp = mean(lifeExp)) %>% 
   arrange(desc(avg_lifeExp))
 ```
+
 <br>
+
 ```{r}
 #| echo: true
 #| class-output: "remark-code"
@@ -956,39 +964,3 @@ data %>%
 :::
 
 # Let's practice
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
