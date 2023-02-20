@@ -964,3 +964,8 @@ data %>%
 :::
 
 # Let's practice
+
+
+# Thank you!
+
+![](img/Intro to SEM.png){fig-align="center" height=400}
