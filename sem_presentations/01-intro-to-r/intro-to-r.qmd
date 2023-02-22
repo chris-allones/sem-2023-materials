@@ -968,4 +968,6 @@ data %>%
 
 # Thank you!
 
-![](img/Intro to SEM.png){fig-align="center" height=400}
+# Thank you!
+
+![](img/Intro to SEM.png){fig-align="center" height=40% width=40%}

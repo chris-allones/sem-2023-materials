@@ -1146,4 +1146,4 @@ fa_varimax$scores %>% round(4) %>% data.frame() %>% tibble()
 
 # Thank you!
 
-![](image/Intro%20to%20SEM.png){fig-align="center" height="400"}
+![](image/Intro to SEM.png){fig-align="center" height=40% width=40%}
