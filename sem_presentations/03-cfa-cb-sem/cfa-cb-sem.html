@@ -1023,10 +1023,799 @@
 </div>
 </div>
 </div>
+</section>
+<section id="summary-output" class="slide level2">
+<h2>Summary output</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li><p>Overall results</p></li>
+<li><p>Loadings</p></li>
+<li><p>Variances</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">summary</span>(cfa_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">summary</span>(cfa_fit)</span>
+<span id="cb12-3"><a href="#cb12-3"></a>lavaan <span class="dv">0</span>.<span class="fl">6.13</span> ended normally after <span class="dv">54</span> iterations</span>
+<span id="cb12-4"><a href="#cb12-4"></a></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  Estimator                                         ML</span>
+<span id="cb12-6"><a href="#cb12-6"></a>  Optimization method                           NLMINB</span>
+<span id="cb12-7"><a href="#cb12-7"></a>  Number of model parameters                        <span class="dv">52</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  Number of observations                           <span class="dv">400</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a>Model Test User Model<span class="sc">:</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>                                                      </span>
+<span id="cb12-13"><a href="#cb12-13"></a>  Test statistic                               <span class="fl">240.738</span></span>
+<span id="cb12-14"><a href="#cb12-14"></a>  Degrees of freedom                               <span class="dv">179</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>  P<span class="sc">-</span><span class="fu">value</span> (Chi<span class="sc">-</span>square)                           <span class="fl">0.001</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a></span>
+<span id="cb12-17"><a href="#cb12-17"></a>Parameter Estimates<span class="sc">:</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a>  Standard errors                             Standard</span>
+<span id="cb12-20"><a href="#cb12-20"></a>  Information                                 Expected</span>
+<span id="cb12-21"><a href="#cb12-21"></a>  Information <span class="fu">saturated</span> (h1) model          Structured</span>
+<span id="cb12-22"><a href="#cb12-22"></a></span>
+<span id="cb12-23"><a href="#cb12-23"></a>Latent Variables<span class="sc">:</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb12-25"><a href="#cb12-25"></a>  SI <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb12-26"><a href="#cb12-26"></a>    SI1               <span class="fl">1.000</span>                           </span>
+<span id="cb12-27"><a href="#cb12-27"></a>    SI2               <span class="fl">1.073</span>    <span class="fl">0.055</span>   <span class="fl">19.563</span>    <span class="fl">0.000</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a>    SI3               <span class="fl">1.065</span>    <span class="fl">0.066</span>   <span class="fl">16.053</span>    <span class="fl">0.000</span></span>
+<span id="cb12-29"><a href="#cb12-29"></a>    SI4               <span class="fl">1.167</span>    <span class="fl">0.061</span>   <span class="fl">19.230</span>    <span class="fl">0.000</span></span>
+<span id="cb12-30"><a href="#cb12-30"></a>  JS <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb12-31"><a href="#cb12-31"></a>    JS1               <span class="fl">1.000</span>                           </span>
+<span id="cb12-32"><a href="#cb12-32"></a>    JS2               <span class="fl">1.033</span>    <span class="fl">0.075</span>   <span class="fl">13.683</span>    <span class="fl">0.000</span></span>
+<span id="cb12-33"><a href="#cb12-33"></a>    JS3               <span class="fl">0.902</span>    <span class="fl">0.072</span>   <span class="fl">12.516</span>    <span class="fl">0.000</span></span>
+<span id="cb12-34"><a href="#cb12-34"></a>    JS4               <span class="fl">0.910</span>    <span class="fl">0.070</span>   <span class="fl">12.958</span>    <span class="fl">0.000</span></span>
+<span id="cb12-35"><a href="#cb12-35"></a>    JS5              <span class="fl">15.190</span>    <span class="fl">1.132</span>   <span class="fl">13.414</span>    <span class="fl">0.000</span></span>
+<span id="cb12-36"><a href="#cb12-36"></a>  AC <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb12-37"><a href="#cb12-37"></a>    AC1               <span class="fl">1.000</span>                           </span>
+<span id="cb12-38"><a href="#cb12-38"></a>    AC2               <span class="fl">1.236</span>    <span class="fl">0.067</span>   <span class="fl">18.392</span>    <span class="fl">0.000</span></span>
+<span id="cb12-39"><a href="#cb12-39"></a>    AC3               <span class="fl">1.037</span>    <span class="fl">0.055</span>   <span class="fl">18.870</span>    <span class="fl">0.000</span></span>
+<span id="cb12-40"><a href="#cb12-40"></a>    AC4               <span class="fl">1.146</span>    <span class="fl">0.063</span>   <span class="fl">18.255</span>    <span class="fl">0.000</span></span>
+<span id="cb12-41"><a href="#cb12-41"></a>  EP <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb12-42"><a href="#cb12-42"></a>    EP1               <span class="fl">1.000</span>                           </span>
+<span id="cb12-43"><a href="#cb12-43"></a>    EP2               <span class="fl">1.033</span>    <span class="fl">0.073</span>   <span class="fl">14.083</span>    <span class="fl">0.000</span></span>
+<span id="cb12-44"><a href="#cb12-44"></a>    EP3               <span class="fl">0.821</span>    <span class="fl">0.060</span>   <span class="fl">13.734</span>    <span class="fl">0.000</span></span>
+<span id="cb12-45"><a href="#cb12-45"></a>    EP4               <span class="fl">0.914</span>    <span class="fl">0.064</span>   <span class="fl">14.335</span>    <span class="fl">0.000</span></span>
+<span id="cb12-46"><a href="#cb12-46"></a>  OC <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb12-47"><a href="#cb12-47"></a>    OC1               <span class="fl">1.000</span>                           </span>
+<span id="cb12-48"><a href="#cb12-48"></a>    OC2               <span class="fl">1.314</span>    <span class="fl">0.108</span>   <span class="fl">12.209</span>    <span class="fl">0.000</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a>    OC3               <span class="fl">0.783</span>    <span class="fl">0.076</span>   <span class="fl">10.322</span>    <span class="fl">0.000</span></span>
+<span id="cb12-50"><a href="#cb12-50"></a>    OC4               <span class="fl">1.165</span>    <span class="fl">0.097</span>   <span class="fl">11.968</span>    <span class="fl">0.000</span></span>
+<span id="cb12-51"><a href="#cb12-51"></a></span>
+<span id="cb12-52"><a href="#cb12-52"></a>Covariances<span class="sc">:</span></span>
+<span id="cb12-53"><a href="#cb12-53"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb12-54"><a href="#cb12-54"></a>  SI <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb12-55"><a href="#cb12-55"></a>    JS                <span class="fl">0.161</span>    <span class="fl">0.042</span>    <span class="fl">3.834</span>    <span class="fl">0.000</span></span>
+<span id="cb12-56"><a href="#cb12-56"></a>    AC                <span class="fl">0.249</span>    <span class="fl">0.048</span>    <span class="fl">5.161</span>    <span class="fl">0.000</span></span>
+<span id="cb12-57"><a href="#cb12-57"></a>    EP                <span class="fl">0.502</span>    <span class="fl">0.065</span>    <span class="fl">7.733</span>    <span class="fl">0.000</span></span>
+<span id="cb12-58"><a href="#cb12-58"></a>    OC                <span class="fl">0.574</span>    <span class="fl">0.080</span>    <span class="fl">7.191</span>    <span class="fl">0.000</span></span>
+<span id="cb12-59"><a href="#cb12-59"></a>  JS <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb12-60"><a href="#cb12-60"></a>    AC                <span class="fl">0.057</span>    <span class="fl">0.065</span>    <span class="fl">0.868</span>    <span class="fl">0.386</span></span>
+<span id="cb12-61"><a href="#cb12-61"></a>    EP                <span class="fl">0.303</span>    <span class="fl">0.078</span>    <span class="fl">3.892</span>    <span class="fl">0.000</span></span>
+<span id="cb12-62"><a href="#cb12-62"></a>    OC                <span class="fl">0.304</span>    <span class="fl">0.090</span>    <span class="fl">3.390</span>    <span class="fl">0.001</span></span>
+<span id="cb12-63"><a href="#cb12-63"></a>  AC <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb12-64"><a href="#cb12-64"></a>    EP                <span class="fl">0.372</span>    <span class="fl">0.088</span>    <span class="fl">4.251</span>    <span class="fl">0.000</span></span>
+<span id="cb12-65"><a href="#cb12-65"></a>    OC                <span class="fl">0.517</span>    <span class="fl">0.107</span>    <span class="fl">4.842</span>    <span class="fl">0.000</span></span>
+<span id="cb12-66"><a href="#cb12-66"></a>  EP <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb12-67"><a href="#cb12-67"></a>    OC                <span class="fl">0.925</span>    <span class="fl">0.143</span>    <span class="fl">6.469</span>    <span class="fl">0.000</span></span>
+<span id="cb12-68"><a href="#cb12-68"></a></span>
+<span id="cb12-69"><a href="#cb12-69"></a>Variances<span class="sc">:</span></span>
+<span id="cb12-70"><a href="#cb12-70"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb12-71"><a href="#cb12-71"></a>   .SI1               <span class="fl">0.258</span>    <span class="fl">0.023</span>   <span class="fl">11.121</span>    <span class="fl">0.000</span></span>
+<span id="cb12-72"><a href="#cb12-72"></a>   .SI2               <span class="fl">0.195</span>    <span class="fl">0.021</span>    <span class="fl">9.479</span>    <span class="fl">0.000</span></span>
+<span id="cb12-73"><a href="#cb12-73"></a>   .SI3               <span class="fl">0.464</span>    <span class="fl">0.038</span>   <span class="fl">12.264</span>    <span class="fl">0.000</span></span>
+<span id="cb12-74"><a href="#cb12-74"></a>   .SI4               <span class="fl">0.256</span>    <span class="fl">0.026</span>    <span class="fl">9.952</span>    <span class="fl">0.000</span></span>
+<span id="cb12-75"><a href="#cb12-75"></a>   .JS1               <span class="fl">0.807</span>    <span class="fl">0.074</span>   <span class="fl">10.960</span>    <span class="fl">0.000</span></span>
+<span id="cb12-76"><a href="#cb12-76"></a>   .JS2               <span class="fl">0.825</span>    <span class="fl">0.076</span>   <span class="fl">10.822</span>    <span class="fl">0.000</span></span>
+<span id="cb12-77"><a href="#cb12-77"></a>   .JS3               <span class="fl">0.930</span>    <span class="fl">0.078</span>   <span class="fl">11.910</span>    <span class="fl">0.000</span></span>
+<span id="cb12-78"><a href="#cb12-78"></a>   .JS4               <span class="fl">0.824</span>    <span class="fl">0.071</span>   <span class="fl">11.570</span>    <span class="fl">0.000</span></span>
+<span id="cb12-79"><a href="#cb12-79"></a>   .JS5             <span class="fl">196.867</span>   <span class="fl">17.681</span>   <span class="fl">11.135</span>    <span class="fl">0.000</span></span>
+<span id="cb12-80"><a href="#cb12-80"></a>   .AC1               <span class="fl">0.628</span>    <span class="fl">0.059</span>   <span class="fl">10.566</span>    <span class="fl">0.000</span></span>
+<span id="cb12-81"><a href="#cb12-81"></a>   .AC2               <span class="fl">0.973</span>    <span class="fl">0.092</span>   <span class="fl">10.617</span>    <span class="fl">0.000</span></span>
+<span id="cb12-82"><a href="#cb12-82"></a>   .AC3               <span class="fl">0.601</span>    <span class="fl">0.059</span>   <span class="fl">10.114</span>    <span class="fl">0.000</span></span>
+<span id="cb12-83"><a href="#cb12-83"></a>   .AC4               <span class="fl">0.867</span>    <span class="fl">0.081</span>   <span class="fl">10.742</span>    <span class="fl">0.000</span></span>
+<span id="cb12-84"><a href="#cb12-84"></a>   .EP1               <span class="fl">1.744</span>    <span class="fl">0.143</span>   <span class="fl">12.222</span>    <span class="fl">0.000</span></span>
+<span id="cb12-85"><a href="#cb12-85"></a>   .EP2               <span class="fl">0.937</span>    <span class="fl">0.091</span>   <span class="fl">10.245</span>    <span class="fl">0.000</span></span>
+<span id="cb12-86"><a href="#cb12-86"></a>   .EP3               <span class="fl">0.699</span>    <span class="fl">0.064</span>   <span class="fl">10.860</span>    <span class="fl">0.000</span></span>
+<span id="cb12-87"><a href="#cb12-87"></a>   .EP4               <span class="fl">0.637</span>    <span class="fl">0.066</span>    <span class="fl">9.659</span>    <span class="fl">0.000</span></span>
+<span id="cb12-88"><a href="#cb12-88"></a>   .OC1               <span class="fl">4.196</span>    <span class="fl">0.318</span>   <span class="fl">13.177</span>    <span class="fl">0.000</span></span>
+<span id="cb12-89"><a href="#cb12-89"></a>   .OC2               <span class="fl">1.029</span>    <span class="fl">0.149</span>    <span class="fl">6.929</span>    <span class="fl">0.000</span></span>
+<span id="cb12-90"><a href="#cb12-90"></a>   .OC3               <span class="fl">1.745</span>    <span class="fl">0.137</span>   <span class="fl">12.700</span>    <span class="fl">0.000</span></span>
+<span id="cb12-91"><a href="#cb12-91"></a>   .OC4               <span class="fl">1.267</span>    <span class="fl">0.138</span>    <span class="fl">9.193</span>    <span class="fl">0.000</span></span>
+<span id="cb12-92"><a href="#cb12-92"></a>    SI                <span class="fl">0.498</span>    <span class="fl">0.052</span>    <span class="fl">9.526</span>    <span class="fl">0.000</span></span>
+<span id="cb12-93"><a href="#cb12-93"></a>    JS                <span class="fl">0.981</span>    <span class="fl">0.122</span>    <span class="fl">8.038</span>    <span class="fl">0.000</span></span>
+<span id="cb12-94"><a href="#cb12-94"></a>    AC                <span class="fl">1.309</span>    <span class="fl">0.135</span>    <span class="fl">9.664</span>    <span class="fl">0.000</span></span>
+<span id="cb12-95"><a href="#cb12-95"></a>    EP                <span class="fl">1.600</span>    <span class="fl">0.214</span>    <span class="fl">7.471</span>    <span class="fl">0.000</span></span>
+<span id="cb12-96"><a href="#cb12-96"></a>    OC                <span class="fl">2.164</span>    <span class="fl">0.357</span>    <span class="fl">6.058</span>    <span class="fl">0.000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-output-1" class="slide level2">
+<h2>Summary output</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<h4 id="overall-results">Overall results</h4>
+<ul>
+<li><p>Degrees of freedom (df)</p>
+<ul>
+<li><span class="math inline">\(df = \frac{1}{2} p (p + 1) - k\)</span></li>
+<li><span class="math inline">\(p\)</span> = total observed variables</li>
+<li><span class="math inline">\(k\)</span> = total estimated parameters</li>
+</ul></li>
+<li><p>Identification</p>
+<ul>
+<li>Include at least three manifest variables</li>
+<li>Create models with <span class="math inline">\(df &gt; 0\)</span></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">summary</span>(cfa_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">summary</span>(cfa_fit)</span>
+<span id="cb14-3"><a href="#cb14-3"></a>lavaan <span class="dv">0</span>.<span class="fl">6.13</span> ended normally after <span class="dv">54</span> iterations</span>
+<span id="cb14-4"><a href="#cb14-4"></a></span>
+<span id="cb14-5"><a href="#cb14-5"></a>  Estimator                                         ML</span>
+<span id="cb14-6"><a href="#cb14-6"></a>  Optimization method                           NLMINB</span>
+<span id="cb14-7"><a href="#cb14-7"></a>  Number of model parameters                        <span class="dv">52</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a>  Number of observations                           <span class="dv">400</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a>Model Test User Model<span class="sc">:</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a>                                                      </span>
+<span id="cb14-13"><a href="#cb14-13"></a>  Test statistic                               <span class="fl">240.738</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a>  Degrees of freedom                               <span class="dv">179</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a>  P<span class="sc">-</span><span class="fu">value</span> (Chi<span class="sc">-</span>square)                           <span class="fl">0.001</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a></span>
+<span id="cb14-17"><a href="#cb14-17"></a>Parameter Estimates<span class="sc">:</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a></span>
+<span id="cb14-19"><a href="#cb14-19"></a>  Standard errors                             Standard</span>
+<span id="cb14-20"><a href="#cb14-20"></a>  Information                                 Expected</span>
+<span id="cb14-21"><a href="#cb14-21"></a>  Information <span class="fu">saturated</span> (h1) model          Structured</span>
+<span id="cb14-22"><a href="#cb14-22"></a></span>
+<span id="cb14-23"><a href="#cb14-23"></a>Latent Variables<span class="sc">:</span></span>
+<span id="cb14-24"><a href="#cb14-24"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb14-25"><a href="#cb14-25"></a>  SI <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb14-26"><a href="#cb14-26"></a>    SI1               <span class="fl">1.000</span>                           </span>
+<span id="cb14-27"><a href="#cb14-27"></a>    SI2               <span class="fl">1.073</span>    <span class="fl">0.055</span>   <span class="fl">19.563</span>    <span class="fl">0.000</span></span>
+<span id="cb14-28"><a href="#cb14-28"></a>    SI3               <span class="fl">1.065</span>    <span class="fl">0.066</span>   <span class="fl">16.053</span>    <span class="fl">0.000</span></span>
+<span id="cb14-29"><a href="#cb14-29"></a>    SI4               <span class="fl">1.167</span>    <span class="fl">0.061</span>   <span class="fl">19.230</span>    <span class="fl">0.000</span></span>
+<span id="cb14-30"><a href="#cb14-30"></a>  JS <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb14-31"><a href="#cb14-31"></a>    JS1               <span class="fl">1.000</span>                           </span>
+<span id="cb14-32"><a href="#cb14-32"></a>    JS2               <span class="fl">1.033</span>    <span class="fl">0.075</span>   <span class="fl">13.683</span>    <span class="fl">0.000</span></span>
+<span id="cb14-33"><a href="#cb14-33"></a>    JS3               <span class="fl">0.902</span>    <span class="fl">0.072</span>   <span class="fl">12.516</span>    <span class="fl">0.000</span></span>
+<span id="cb14-34"><a href="#cb14-34"></a>    JS4               <span class="fl">0.910</span>    <span class="fl">0.070</span>   <span class="fl">12.958</span>    <span class="fl">0.000</span></span>
+<span id="cb14-35"><a href="#cb14-35"></a>    JS5              <span class="fl">15.190</span>    <span class="fl">1.132</span>   <span class="fl">13.414</span>    <span class="fl">0.000</span></span>
+<span id="cb14-36"><a href="#cb14-36"></a>  AC <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb14-37"><a href="#cb14-37"></a>    AC1               <span class="fl">1.000</span>                           </span>
+<span id="cb14-38"><a href="#cb14-38"></a>    AC2               <span class="fl">1.236</span>    <span class="fl">0.067</span>   <span class="fl">18.392</span>    <span class="fl">0.000</span></span>
+<span id="cb14-39"><a href="#cb14-39"></a>    AC3               <span class="fl">1.037</span>    <span class="fl">0.055</span>   <span class="fl">18.870</span>    <span class="fl">0.000</span></span>
+<span id="cb14-40"><a href="#cb14-40"></a>    AC4               <span class="fl">1.146</span>    <span class="fl">0.063</span>   <span class="fl">18.255</span>    <span class="fl">0.000</span></span>
+<span id="cb14-41"><a href="#cb14-41"></a>  EP <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb14-42"><a href="#cb14-42"></a>    EP1               <span class="fl">1.000</span>                           </span>
+<span id="cb14-43"><a href="#cb14-43"></a>    EP2               <span class="fl">1.033</span>    <span class="fl">0.073</span>   <span class="fl">14.083</span>    <span class="fl">0.000</span></span>
+<span id="cb14-44"><a href="#cb14-44"></a>    EP3               <span class="fl">0.821</span>    <span class="fl">0.060</span>   <span class="fl">13.734</span>    <span class="fl">0.000</span></span>
+<span id="cb14-45"><a href="#cb14-45"></a>    EP4               <span class="fl">0.914</span>    <span class="fl">0.064</span>   <span class="fl">14.335</span>    <span class="fl">0.000</span></span>
+<span id="cb14-46"><a href="#cb14-46"></a>  OC <span class="ot">=</span><span class="er">~</span>                                               </span>
+<span id="cb14-47"><a href="#cb14-47"></a>    OC1               <span class="fl">1.000</span>                           </span>
+<span id="cb14-48"><a href="#cb14-48"></a>    OC2               <span class="fl">1.314</span>    <span class="fl">0.108</span>   <span class="fl">12.209</span>    <span class="fl">0.000</span></span>
+<span id="cb14-49"><a href="#cb14-49"></a>    OC3               <span class="fl">0.783</span>    <span class="fl">0.076</span>   <span class="fl">10.322</span>    <span class="fl">0.000</span></span>
+<span id="cb14-50"><a href="#cb14-50"></a>    OC4               <span class="fl">1.165</span>    <span class="fl">0.097</span>   <span class="fl">11.968</span>    <span class="fl">0.000</span></span>
+<span id="cb14-51"><a href="#cb14-51"></a></span>
+<span id="cb14-52"><a href="#cb14-52"></a>Covariances<span class="sc">:</span></span>
+<span id="cb14-53"><a href="#cb14-53"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb14-54"><a href="#cb14-54"></a>  SI <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb14-55"><a href="#cb14-55"></a>    JS                <span class="fl">0.161</span>    <span class="fl">0.042</span>    <span class="fl">3.834</span>    <span class="fl">0.000</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a>    AC                <span class="fl">0.249</span>    <span class="fl">0.048</span>    <span class="fl">5.161</span>    <span class="fl">0.000</span></span>
+<span id="cb14-57"><a href="#cb14-57"></a>    EP                <span class="fl">0.502</span>    <span class="fl">0.065</span>    <span class="fl">7.733</span>    <span class="fl">0.000</span></span>
+<span id="cb14-58"><a href="#cb14-58"></a>    OC                <span class="fl">0.574</span>    <span class="fl">0.080</span>    <span class="fl">7.191</span>    <span class="fl">0.000</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a>  JS <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb14-60"><a href="#cb14-60"></a>    AC                <span class="fl">0.057</span>    <span class="fl">0.065</span>    <span class="fl">0.868</span>    <span class="fl">0.386</span></span>
+<span id="cb14-61"><a href="#cb14-61"></a>    EP                <span class="fl">0.303</span>    <span class="fl">0.078</span>    <span class="fl">3.892</span>    <span class="fl">0.000</span></span>
+<span id="cb14-62"><a href="#cb14-62"></a>    OC                <span class="fl">0.304</span>    <span class="fl">0.090</span>    <span class="fl">3.390</span>    <span class="fl">0.001</span></span>
+<span id="cb14-63"><a href="#cb14-63"></a>  AC <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb14-64"><a href="#cb14-64"></a>    EP                <span class="fl">0.372</span>    <span class="fl">0.088</span>    <span class="fl">4.251</span>    <span class="fl">0.000</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a>    OC                <span class="fl">0.517</span>    <span class="fl">0.107</span>    <span class="fl">4.842</span>    <span class="fl">0.000</span></span>
+<span id="cb14-66"><a href="#cb14-66"></a>  EP <span class="sc">~</span><span class="er">~</span>                                               </span>
+<span id="cb14-67"><a href="#cb14-67"></a>    OC                <span class="fl">0.925</span>    <span class="fl">0.143</span>    <span class="fl">6.469</span>    <span class="fl">0.000</span></span>
+<span id="cb14-68"><a href="#cb14-68"></a></span>
+<span id="cb14-69"><a href="#cb14-69"></a>Variances<span class="sc">:</span></span>
+<span id="cb14-70"><a href="#cb14-70"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)</span>
+<span id="cb14-71"><a href="#cb14-71"></a>   .SI1               <span class="fl">0.258</span>    <span class="fl">0.023</span>   <span class="fl">11.121</span>    <span class="fl">0.000</span></span>
+<span id="cb14-72"><a href="#cb14-72"></a>   .SI2               <span class="fl">0.195</span>    <span class="fl">0.021</span>    <span class="fl">9.479</span>    <span class="fl">0.000</span></span>
+<span id="cb14-73"><a href="#cb14-73"></a>   .SI3               <span class="fl">0.464</span>    <span class="fl">0.038</span>   <span class="fl">12.264</span>    <span class="fl">0.000</span></span>
+<span id="cb14-74"><a href="#cb14-74"></a>   .SI4               <span class="fl">0.256</span>    <span class="fl">0.026</span>    <span class="fl">9.952</span>    <span class="fl">0.000</span></span>
+<span id="cb14-75"><a href="#cb14-75"></a>   .JS1               <span class="fl">0.807</span>    <span class="fl">0.074</span>   <span class="fl">10.960</span>    <span class="fl">0.000</span></span>
+<span id="cb14-76"><a href="#cb14-76"></a>   .JS2               <span class="fl">0.825</span>    <span class="fl">0.076</span>   <span class="fl">10.822</span>    <span class="fl">0.000</span></span>
+<span id="cb14-77"><a href="#cb14-77"></a>   .JS3               <span class="fl">0.930</span>    <span class="fl">0.078</span>   <span class="fl">11.910</span>    <span class="fl">0.000</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a>   .JS4               <span class="fl">0.824</span>    <span class="fl">0.071</span>   <span class="fl">11.570</span>    <span class="fl">0.000</span></span>
+<span id="cb14-79"><a href="#cb14-79"></a>   .JS5             <span class="fl">196.867</span>   <span class="fl">17.681</span>   <span class="fl">11.135</span>    <span class="fl">0.000</span></span>
+<span id="cb14-80"><a href="#cb14-80"></a>   .AC1               <span class="fl">0.628</span>    <span class="fl">0.059</span>   <span class="fl">10.566</span>    <span class="fl">0.000</span></span>
+<span id="cb14-81"><a href="#cb14-81"></a>   .AC2               <span class="fl">0.973</span>    <span class="fl">0.092</span>   <span class="fl">10.617</span>    <span class="fl">0.000</span></span>
+<span id="cb14-82"><a href="#cb14-82"></a>   .AC3               <span class="fl">0.601</span>    <span class="fl">0.059</span>   <span class="fl">10.114</span>    <span class="fl">0.000</span></span>
+<span id="cb14-83"><a href="#cb14-83"></a>   .AC4               <span class="fl">0.867</span>    <span class="fl">0.081</span>   <span class="fl">10.742</span>    <span class="fl">0.000</span></span>
+<span id="cb14-84"><a href="#cb14-84"></a>   .EP1               <span class="fl">1.744</span>    <span class="fl">0.143</span>   <span class="fl">12.222</span>    <span class="fl">0.000</span></span>
+<span id="cb14-85"><a href="#cb14-85"></a>   .EP2               <span class="fl">0.937</span>    <span class="fl">0.091</span>   <span class="fl">10.245</span>    <span class="fl">0.000</span></span>
+<span id="cb14-86"><a href="#cb14-86"></a>   .EP3               <span class="fl">0.699</span>    <span class="fl">0.064</span>   <span class="fl">10.860</span>    <span class="fl">0.000</span></span>
+<span id="cb14-87"><a href="#cb14-87"></a>   .EP4               <span class="fl">0.637</span>    <span class="fl">0.066</span>    <span class="fl">9.659</span>    <span class="fl">0.000</span></span>
+<span id="cb14-88"><a href="#cb14-88"></a>   .OC1               <span class="fl">4.196</span>    <span class="fl">0.318</span>   <span class="fl">13.177</span>    <span class="fl">0.000</span></span>
+<span id="cb14-89"><a href="#cb14-89"></a>   .OC2               <span class="fl">1.029</span>    <span class="fl">0.149</span>    <span class="fl">6.929</span>    <span class="fl">0.000</span></span>
+<span id="cb14-90"><a href="#cb14-90"></a>   .OC3               <span class="fl">1.745</span>    <span class="fl">0.137</span>   <span class="fl">12.700</span>    <span class="fl">0.000</span></span>
+<span id="cb14-91"><a href="#cb14-91"></a>   .OC4               <span class="fl">1.267</span>    <span class="fl">0.138</span>    <span class="fl">9.193</span>    <span class="fl">0.000</span></span>
+<span id="cb14-92"><a href="#cb14-92"></a>    SI                <span class="fl">0.498</span>    <span class="fl">0.052</span>    <span class="fl">9.526</span>    <span class="fl">0.000</span></span>
+<span id="cb14-93"><a href="#cb14-93"></a>    JS                <span class="fl">0.981</span>    <span class="fl">0.122</span>    <span class="fl">8.038</span>    <span class="fl">0.000</span></span>
+<span id="cb14-94"><a href="#cb14-94"></a>    AC                <span class="fl">1.309</span>    <span class="fl">0.135</span>    <span class="fl">9.664</span>    <span class="fl">0.000</span></span>
+<span id="cb14-95"><a href="#cb14-95"></a>    EP                <span class="fl">1.600</span>    <span class="fl">0.214</span>    <span class="fl">7.471</span>    <span class="fl">0.000</span></span>
+<span id="cb14-96"><a href="#cb14-96"></a>    OC                <span class="fl">2.164</span>    <span class="fl">0.357</span>    <span class="fl">6.058</span>    <span class="fl">0.000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-output-2" class="slide level2">
+<h2>Summary output</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h4 id="loadings">Loadings</h4>
+<ul>
+<li>Measures the strength of the relationship between items and factor.</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">summary</span>(cfa_fit, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">summary</span>(cfa_fit, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>lavaan <span class="dv">0</span>.<span class="fl">6.13</span> ended normally after <span class="dv">54</span> iterations</span>
+<span id="cb16-4"><a href="#cb16-4"></a></span>
+<span id="cb16-5"><a href="#cb16-5"></a>  Estimator                                         ML</span>
+<span id="cb16-6"><a href="#cb16-6"></a>  Optimization method                           NLMINB</span>
+<span id="cb16-7"><a href="#cb16-7"></a>  Number of model parameters                        <span class="dv">52</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a></span>
+<span id="cb16-9"><a href="#cb16-9"></a>  Number of observations                           <span class="dv">400</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a></span>
+<span id="cb16-11"><a href="#cb16-11"></a>Model Test User Model<span class="sc">:</span></span>
+<span id="cb16-12"><a href="#cb16-12"></a>                                                      </span>
+<span id="cb16-13"><a href="#cb16-13"></a>  Test statistic                               <span class="fl">240.738</span></span>
+<span id="cb16-14"><a href="#cb16-14"></a>  Degrees of freedom                               <span class="dv">179</span></span>
+<span id="cb16-15"><a href="#cb16-15"></a>  P<span class="sc">-</span><span class="fu">value</span> (Chi<span class="sc">-</span>square)                           <span class="fl">0.001</span></span>
+<span id="cb16-16"><a href="#cb16-16"></a></span>
+<span id="cb16-17"><a href="#cb16-17"></a>Parameter Estimates<span class="sc">:</span></span>
+<span id="cb16-18"><a href="#cb16-18"></a></span>
+<span id="cb16-19"><a href="#cb16-19"></a>  Standard errors                             Standard</span>
+<span id="cb16-20"><a href="#cb16-20"></a>  Information                                 Expected</span>
+<span id="cb16-21"><a href="#cb16-21"></a>  Information <span class="fu">saturated</span> (h1) model          Structured</span>
+<span id="cb16-22"><a href="#cb16-22"></a></span>
+<span id="cb16-23"><a href="#cb16-23"></a>Latent Variables<span class="sc">:</span></span>
+<span id="cb16-24"><a href="#cb16-24"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb16-25"><a href="#cb16-25"></a>  SI <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-26"><a href="#cb16-26"></a>    SI1               <span class="fl">1.000</span>                               <span class="fl">0.706</span>    <span class="fl">0.811</span></span>
+<span id="cb16-27"><a href="#cb16-27"></a>    SI2               <span class="fl">1.073</span>    <span class="fl">0.055</span>   <span class="fl">19.563</span>    <span class="fl">0.000</span>    <span class="fl">0.757</span>    <span class="fl">0.864</span></span>
+<span id="cb16-28"><a href="#cb16-28"></a>    SI3               <span class="fl">1.065</span>    <span class="fl">0.066</span>   <span class="fl">16.053</span>    <span class="fl">0.000</span>    <span class="fl">0.752</span>    <span class="fl">0.741</span></span>
+<span id="cb16-29"><a href="#cb16-29"></a>    SI4               <span class="fl">1.167</span>    <span class="fl">0.061</span>   <span class="fl">19.230</span>    <span class="fl">0.000</span>    <span class="fl">0.823</span>    <span class="fl">0.852</span></span>
+<span id="cb16-30"><a href="#cb16-30"></a>  JS <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-31"><a href="#cb16-31"></a>    JS1               <span class="fl">1.000</span>                               <span class="fl">0.991</span>    <span class="fl">0.741</span></span>
+<span id="cb16-32"><a href="#cb16-32"></a>    JS2               <span class="fl">1.033</span>    <span class="fl">0.075</span>   <span class="fl">13.683</span>    <span class="fl">0.000</span>    <span class="fl">1.023</span>    <span class="fl">0.748</span></span>
+<span id="cb16-33"><a href="#cb16-33"></a>    JS3               <span class="fl">0.902</span>    <span class="fl">0.072</span>   <span class="fl">12.516</span>    <span class="fl">0.000</span>    <span class="fl">0.894</span>    <span class="fl">0.680</span></span>
+<span id="cb16-34"><a href="#cb16-34"></a>    JS4               <span class="fl">0.910</span>    <span class="fl">0.070</span>   <span class="fl">12.958</span>    <span class="fl">0.000</span>    <span class="fl">0.902</span>    <span class="fl">0.705</span></span>
+<span id="cb16-35"><a href="#cb16-35"></a>    JS5              <span class="fl">15.190</span>    <span class="fl">1.132</span>   <span class="fl">13.414</span>    <span class="fl">0.000</span>   <span class="fl">15.046</span>    <span class="fl">0.731</span></span>
+<span id="cb16-36"><a href="#cb16-36"></a>  AC <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-37"><a href="#cb16-37"></a>    AC1               <span class="fl">1.000</span>                               <span class="fl">1.144</span>    <span class="fl">0.822</span></span>
+<span id="cb16-38"><a href="#cb16-38"></a>    AC2               <span class="fl">1.236</span>    <span class="fl">0.067</span>   <span class="fl">18.392</span>    <span class="fl">0.000</span>    <span class="fl">1.414</span>    <span class="fl">0.820</span></span>
+<span id="cb16-39"><a href="#cb16-39"></a>    AC3               <span class="fl">1.037</span>    <span class="fl">0.055</span>   <span class="fl">18.870</span>    <span class="fl">0.000</span>    <span class="fl">1.187</span>    <span class="fl">0.837</span></span>
+<span id="cb16-40"><a href="#cb16-40"></a>    AC4               <span class="fl">1.146</span>    <span class="fl">0.063</span>   <span class="fl">18.255</span>    <span class="fl">0.000</span>    <span class="fl">1.312</span>    <span class="fl">0.815</span></span>
+<span id="cb16-41"><a href="#cb16-41"></a>  EP <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-42"><a href="#cb16-42"></a>    EP1               <span class="fl">1.000</span>                               <span class="fl">1.265</span>    <span class="fl">0.692</span></span>
+<span id="cb16-43"><a href="#cb16-43"></a>    EP2               <span class="fl">1.033</span>    <span class="fl">0.073</span>   <span class="fl">14.083</span>    <span class="fl">0.000</span>    <span class="fl">1.307</span>    <span class="fl">0.803</span></span>
+<span id="cb16-44"><a href="#cb16-44"></a>    EP3               <span class="fl">0.821</span>    <span class="fl">0.060</span>   <span class="fl">13.734</span>    <span class="fl">0.000</span>    <span class="fl">1.038</span>    <span class="fl">0.779</span></span>
+<span id="cb16-45"><a href="#cb16-45"></a>    EP4               <span class="fl">0.914</span>    <span class="fl">0.064</span>   <span class="fl">14.335</span>    <span class="fl">0.000</span>    <span class="fl">1.156</span>    <span class="fl">0.823</span></span>
+<span id="cb16-46"><a href="#cb16-46"></a>  OC <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-47"><a href="#cb16-47"></a>    OC1               <span class="fl">1.000</span>                               <span class="fl">1.471</span>    <span class="fl">0.583</span></span>
+<span id="cb16-48"><a href="#cb16-48"></a>    OC2               <span class="fl">1.314</span>    <span class="fl">0.108</span>   <span class="fl">12.209</span>    <span class="fl">0.000</span>    <span class="fl">1.934</span>    <span class="fl">0.886</span></span>
+<span id="cb16-49"><a href="#cb16-49"></a>    OC3               <span class="fl">0.783</span>    <span class="fl">0.076</span>   <span class="fl">10.322</span>    <span class="fl">0.000</span>    <span class="fl">1.151</span>    <span class="fl">0.657</span></span>
+<span id="cb16-50"><a href="#cb16-50"></a>    OC4               <span class="fl">1.165</span>    <span class="fl">0.097</span>   <span class="fl">11.968</span>    <span class="fl">0.000</span>    <span class="fl">1.714</span>    <span class="fl">0.836</span></span>
+<span id="cb16-51"><a href="#cb16-51"></a></span>
+<span id="cb16-52"><a href="#cb16-52"></a>Covariances<span class="sc">:</span></span>
+<span id="cb16-53"><a href="#cb16-53"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb16-54"><a href="#cb16-54"></a>  SI <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-55"><a href="#cb16-55"></a>    JS                <span class="fl">0.161</span>    <span class="fl">0.042</span>    <span class="fl">3.834</span>    <span class="fl">0.000</span>    <span class="fl">0.230</span>    <span class="fl">0.230</span></span>
+<span id="cb16-56"><a href="#cb16-56"></a>    AC                <span class="fl">0.249</span>    <span class="fl">0.048</span>    <span class="fl">5.161</span>    <span class="fl">0.000</span>    <span class="fl">0.309</span>    <span class="fl">0.309</span></span>
+<span id="cb16-57"><a href="#cb16-57"></a>    EP                <span class="fl">0.502</span>    <span class="fl">0.065</span>    <span class="fl">7.733</span>    <span class="fl">0.000</span>    <span class="fl">0.562</span>    <span class="fl">0.562</span></span>
+<span id="cb16-58"><a href="#cb16-58"></a>    OC                <span class="fl">0.574</span>    <span class="fl">0.080</span>    <span class="fl">7.191</span>    <span class="fl">0.000</span>    <span class="fl">0.553</span>    <span class="fl">0.553</span></span>
+<span id="cb16-59"><a href="#cb16-59"></a>  JS <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-60"><a href="#cb16-60"></a>    AC                <span class="fl">0.057</span>    <span class="fl">0.065</span>    <span class="fl">0.868</span>    <span class="fl">0.386</span>    <span class="fl">0.050</span>    <span class="fl">0.050</span></span>
+<span id="cb16-61"><a href="#cb16-61"></a>    EP                <span class="fl">0.303</span>    <span class="fl">0.078</span>    <span class="fl">3.892</span>    <span class="fl">0.000</span>    <span class="fl">0.242</span>    <span class="fl">0.242</span></span>
+<span id="cb16-62"><a href="#cb16-62"></a>    OC                <span class="fl">0.304</span>    <span class="fl">0.090</span>    <span class="fl">3.390</span>    <span class="fl">0.001</span>    <span class="fl">0.209</span>    <span class="fl">0.209</span></span>
+<span id="cb16-63"><a href="#cb16-63"></a>  AC <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-64"><a href="#cb16-64"></a>    EP                <span class="fl">0.372</span>    <span class="fl">0.088</span>    <span class="fl">4.251</span>    <span class="fl">0.000</span>    <span class="fl">0.257</span>    <span class="fl">0.257</span></span>
+<span id="cb16-65"><a href="#cb16-65"></a>    OC                <span class="fl">0.517</span>    <span class="fl">0.107</span>    <span class="fl">4.842</span>    <span class="fl">0.000</span>    <span class="fl">0.307</span>    <span class="fl">0.307</span></span>
+<span id="cb16-66"><a href="#cb16-66"></a>  EP <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb16-67"><a href="#cb16-67"></a>    OC                <span class="fl">0.925</span>    <span class="fl">0.143</span>    <span class="fl">6.469</span>    <span class="fl">0.000</span>    <span class="fl">0.497</span>    <span class="fl">0.497</span></span>
+<span id="cb16-68"><a href="#cb16-68"></a></span>
+<span id="cb16-69"><a href="#cb16-69"></a>Variances<span class="sc">:</span></span>
+<span id="cb16-70"><a href="#cb16-70"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb16-71"><a href="#cb16-71"></a>   .SI1               <span class="fl">0.258</span>    <span class="fl">0.023</span>   <span class="fl">11.121</span>    <span class="fl">0.000</span>    <span class="fl">0.258</span>    <span class="fl">0.342</span></span>
+<span id="cb16-72"><a href="#cb16-72"></a>   .SI2               <span class="fl">0.195</span>    <span class="fl">0.021</span>    <span class="fl">9.479</span>    <span class="fl">0.000</span>    <span class="fl">0.195</span>    <span class="fl">0.253</span></span>
+<span id="cb16-73"><a href="#cb16-73"></a>   .SI3               <span class="fl">0.464</span>    <span class="fl">0.038</span>   <span class="fl">12.264</span>    <span class="fl">0.000</span>    <span class="fl">0.464</span>    <span class="fl">0.451</span></span>
+<span id="cb16-74"><a href="#cb16-74"></a>   .SI4               <span class="fl">0.256</span>    <span class="fl">0.026</span>    <span class="fl">9.952</span>    <span class="fl">0.000</span>    <span class="fl">0.256</span>    <span class="fl">0.274</span></span>
+<span id="cb16-75"><a href="#cb16-75"></a>   .JS1               <span class="fl">0.807</span>    <span class="fl">0.074</span>   <span class="fl">10.960</span>    <span class="fl">0.000</span>    <span class="fl">0.807</span>    <span class="fl">0.451</span></span>
+<span id="cb16-76"><a href="#cb16-76"></a>   .JS2               <span class="fl">0.825</span>    <span class="fl">0.076</span>   <span class="fl">10.822</span>    <span class="fl">0.000</span>    <span class="fl">0.825</span>    <span class="fl">0.441</span></span>
+<span id="cb16-77"><a href="#cb16-77"></a>   .JS3               <span class="fl">0.930</span>    <span class="fl">0.078</span>   <span class="fl">11.910</span>    <span class="fl">0.000</span>    <span class="fl">0.930</span>    <span class="fl">0.538</span></span>
+<span id="cb16-78"><a href="#cb16-78"></a>   .JS4               <span class="fl">0.824</span>    <span class="fl">0.071</span>   <span class="fl">11.570</span>    <span class="fl">0.000</span>    <span class="fl">0.824</span>    <span class="fl">0.503</span></span>
+<span id="cb16-79"><a href="#cb16-79"></a>   .JS5             <span class="fl">196.867</span>   <span class="fl">17.681</span>   <span class="fl">11.135</span>    <span class="fl">0.000</span>  <span class="fl">196.867</span>    <span class="fl">0.465</span></span>
+<span id="cb16-80"><a href="#cb16-80"></a>   .AC1               <span class="fl">0.628</span>    <span class="fl">0.059</span>   <span class="fl">10.566</span>    <span class="fl">0.000</span>    <span class="fl">0.628</span>    <span class="fl">0.324</span></span>
+<span id="cb16-81"><a href="#cb16-81"></a>   .AC2               <span class="fl">0.973</span>    <span class="fl">0.092</span>   <span class="fl">10.617</span>    <span class="fl">0.000</span>    <span class="fl">0.973</span>    <span class="fl">0.327</span></span>
+<span id="cb16-82"><a href="#cb16-82"></a>   .AC3               <span class="fl">0.601</span>    <span class="fl">0.059</span>   <span class="fl">10.114</span>    <span class="fl">0.000</span>    <span class="fl">0.601</span>    <span class="fl">0.299</span></span>
+<span id="cb16-83"><a href="#cb16-83"></a>   .AC4               <span class="fl">0.867</span>    <span class="fl">0.081</span>   <span class="fl">10.742</span>    <span class="fl">0.000</span>    <span class="fl">0.867</span>    <span class="fl">0.335</span></span>
+<span id="cb16-84"><a href="#cb16-84"></a>   .EP1               <span class="fl">1.744</span>    <span class="fl">0.143</span>   <span class="fl">12.222</span>    <span class="fl">0.000</span>    <span class="fl">1.744</span>    <span class="fl">0.522</span></span>
+<span id="cb16-85"><a href="#cb16-85"></a>   .EP2               <span class="fl">0.937</span>    <span class="fl">0.091</span>   <span class="fl">10.245</span>    <span class="fl">0.000</span>    <span class="fl">0.937</span>    <span class="fl">0.354</span></span>
+<span id="cb16-86"><a href="#cb16-86"></a>   .EP3               <span class="fl">0.699</span>    <span class="fl">0.064</span>   <span class="fl">10.860</span>    <span class="fl">0.000</span>    <span class="fl">0.699</span>    <span class="fl">0.393</span></span>
+<span id="cb16-87"><a href="#cb16-87"></a>   .EP4               <span class="fl">0.637</span>    <span class="fl">0.066</span>    <span class="fl">9.659</span>    <span class="fl">0.000</span>    <span class="fl">0.637</span>    <span class="fl">0.323</span></span>
+<span id="cb16-88"><a href="#cb16-88"></a>   .OC1               <span class="fl">4.196</span>    <span class="fl">0.318</span>   <span class="fl">13.177</span>    <span class="fl">0.000</span>    <span class="fl">4.196</span>    <span class="fl">0.660</span></span>
+<span id="cb16-89"><a href="#cb16-89"></a>   .OC2               <span class="fl">1.029</span>    <span class="fl">0.149</span>    <span class="fl">6.929</span>    <span class="fl">0.000</span>    <span class="fl">1.029</span>    <span class="fl">0.216</span></span>
+<span id="cb16-90"><a href="#cb16-90"></a>   .OC3               <span class="fl">1.745</span>    <span class="fl">0.137</span>   <span class="fl">12.700</span>    <span class="fl">0.000</span>    <span class="fl">1.745</span>    <span class="fl">0.568</span></span>
+<span id="cb16-91"><a href="#cb16-91"></a>   .OC4               <span class="fl">1.267</span>    <span class="fl">0.138</span>    <span class="fl">9.193</span>    <span class="fl">0.000</span>    <span class="fl">1.267</span>    <span class="fl">0.301</span></span>
+<span id="cb16-92"><a href="#cb16-92"></a>    SI                <span class="fl">0.498</span>    <span class="fl">0.052</span>    <span class="fl">9.526</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb16-93"><a href="#cb16-93"></a>    JS                <span class="fl">0.981</span>    <span class="fl">0.122</span>    <span class="fl">8.038</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb16-94"><a href="#cb16-94"></a>    AC                <span class="fl">1.309</span>    <span class="fl">0.135</span>    <span class="fl">9.664</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb16-95"><a href="#cb16-95"></a>    EP                <span class="fl">1.600</span>    <span class="fl">0.214</span>    <span class="fl">7.471</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb16-96"><a href="#cb16-96"></a>    OC                <span class="fl">2.164</span>    <span class="fl">0.357</span>    <span class="fl">6.058</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-output-3" class="slide level2">
+<h2>Summary output</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h4 id="variances">Variances</h4>
+<p>Refer to unique variance that the factor unable to account for. Similar to error term in OLS, hence it is also term as error variance.</p>
+</div><div class="column" style="width:70%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">summary</span>(cfa_fit, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>cfa_fit <span class="ot">&lt;-</span> <span class="fu">cfa</span>(cfa_model, <span class="at">data =</span> hbat_data)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">summary</span>(cfa_fit, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-3"><a href="#cb18-3"></a>lavaan <span class="dv">0</span>.<span class="fl">6.13</span> ended normally after <span class="dv">54</span> iterations</span>
+<span id="cb18-4"><a href="#cb18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5"></a>  Estimator                                         ML</span>
+<span id="cb18-6"><a href="#cb18-6"></a>  Optimization method                           NLMINB</span>
+<span id="cb18-7"><a href="#cb18-7"></a>  Number of model parameters                        <span class="dv">52</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a></span>
+<span id="cb18-9"><a href="#cb18-9"></a>  Number of observations                           <span class="dv">400</span></span>
+<span id="cb18-10"><a href="#cb18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11"></a>Model Test User Model<span class="sc">:</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a>                                                      </span>
+<span id="cb18-13"><a href="#cb18-13"></a>  Test statistic                               <span class="fl">240.738</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a>  Degrees of freedom                               <span class="dv">179</span></span>
+<span id="cb18-15"><a href="#cb18-15"></a>  P<span class="sc">-</span><span class="fu">value</span> (Chi<span class="sc">-</span>square)                           <span class="fl">0.001</span></span>
+<span id="cb18-16"><a href="#cb18-16"></a></span>
+<span id="cb18-17"><a href="#cb18-17"></a>Parameter Estimates<span class="sc">:</span></span>
+<span id="cb18-18"><a href="#cb18-18"></a></span>
+<span id="cb18-19"><a href="#cb18-19"></a>  Standard errors                             Standard</span>
+<span id="cb18-20"><a href="#cb18-20"></a>  Information                                 Expected</span>
+<span id="cb18-21"><a href="#cb18-21"></a>  Information <span class="fu">saturated</span> (h1) model          Structured</span>
+<span id="cb18-22"><a href="#cb18-22"></a></span>
+<span id="cb18-23"><a href="#cb18-23"></a>Latent Variables<span class="sc">:</span></span>
+<span id="cb18-24"><a href="#cb18-24"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb18-25"><a href="#cb18-25"></a>  SI <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-26"><a href="#cb18-26"></a>    SI1               <span class="fl">1.000</span>                               <span class="fl">0.706</span>    <span class="fl">0.811</span></span>
+<span id="cb18-27"><a href="#cb18-27"></a>    SI2               <span class="fl">1.073</span>    <span class="fl">0.055</span>   <span class="fl">19.563</span>    <span class="fl">0.000</span>    <span class="fl">0.757</span>    <span class="fl">0.864</span></span>
+<span id="cb18-28"><a href="#cb18-28"></a>    SI3               <span class="fl">1.065</span>    <span class="fl">0.066</span>   <span class="fl">16.053</span>    <span class="fl">0.000</span>    <span class="fl">0.752</span>    <span class="fl">0.741</span></span>
+<span id="cb18-29"><a href="#cb18-29"></a>    SI4               <span class="fl">1.167</span>    <span class="fl">0.061</span>   <span class="fl">19.230</span>    <span class="fl">0.000</span>    <span class="fl">0.823</span>    <span class="fl">0.852</span></span>
+<span id="cb18-30"><a href="#cb18-30"></a>  JS <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-31"><a href="#cb18-31"></a>    JS1               <span class="fl">1.000</span>                               <span class="fl">0.991</span>    <span class="fl">0.741</span></span>
+<span id="cb18-32"><a href="#cb18-32"></a>    JS2               <span class="fl">1.033</span>    <span class="fl">0.075</span>   <span class="fl">13.683</span>    <span class="fl">0.000</span>    <span class="fl">1.023</span>    <span class="fl">0.748</span></span>
+<span id="cb18-33"><a href="#cb18-33"></a>    JS3               <span class="fl">0.902</span>    <span class="fl">0.072</span>   <span class="fl">12.516</span>    <span class="fl">0.000</span>    <span class="fl">0.894</span>    <span class="fl">0.680</span></span>
+<span id="cb18-34"><a href="#cb18-34"></a>    JS4               <span class="fl">0.910</span>    <span class="fl">0.070</span>   <span class="fl">12.958</span>    <span class="fl">0.000</span>    <span class="fl">0.902</span>    <span class="fl">0.705</span></span>
+<span id="cb18-35"><a href="#cb18-35"></a>    JS5              <span class="fl">15.190</span>    <span class="fl">1.132</span>   <span class="fl">13.414</span>    <span class="fl">0.000</span>   <span class="fl">15.046</span>    <span class="fl">0.731</span></span>
+<span id="cb18-36"><a href="#cb18-36"></a>  AC <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-37"><a href="#cb18-37"></a>    AC1               <span class="fl">1.000</span>                               <span class="fl">1.144</span>    <span class="fl">0.822</span></span>
+<span id="cb18-38"><a href="#cb18-38"></a>    AC2               <span class="fl">1.236</span>    <span class="fl">0.067</span>   <span class="fl">18.392</span>    <span class="fl">0.000</span>    <span class="fl">1.414</span>    <span class="fl">0.820</span></span>
+<span id="cb18-39"><a href="#cb18-39"></a>    AC3               <span class="fl">1.037</span>    <span class="fl">0.055</span>   <span class="fl">18.870</span>    <span class="fl">0.000</span>    <span class="fl">1.187</span>    <span class="fl">0.837</span></span>
+<span id="cb18-40"><a href="#cb18-40"></a>    AC4               <span class="fl">1.146</span>    <span class="fl">0.063</span>   <span class="fl">18.255</span>    <span class="fl">0.000</span>    <span class="fl">1.312</span>    <span class="fl">0.815</span></span>
+<span id="cb18-41"><a href="#cb18-41"></a>  EP <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-42"><a href="#cb18-42"></a>    EP1               <span class="fl">1.000</span>                               <span class="fl">1.265</span>    <span class="fl">0.692</span></span>
+<span id="cb18-43"><a href="#cb18-43"></a>    EP2               <span class="fl">1.033</span>    <span class="fl">0.073</span>   <span class="fl">14.083</span>    <span class="fl">0.000</span>    <span class="fl">1.307</span>    <span class="fl">0.803</span></span>
+<span id="cb18-44"><a href="#cb18-44"></a>    EP3               <span class="fl">0.821</span>    <span class="fl">0.060</span>   <span class="fl">13.734</span>    <span class="fl">0.000</span>    <span class="fl">1.038</span>    <span class="fl">0.779</span></span>
+<span id="cb18-45"><a href="#cb18-45"></a>    EP4               <span class="fl">0.914</span>    <span class="fl">0.064</span>   <span class="fl">14.335</span>    <span class="fl">0.000</span>    <span class="fl">1.156</span>    <span class="fl">0.823</span></span>
+<span id="cb18-46"><a href="#cb18-46"></a>  OC <span class="ot">=</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-47"><a href="#cb18-47"></a>    OC1               <span class="fl">1.000</span>                               <span class="fl">1.471</span>    <span class="fl">0.583</span></span>
+<span id="cb18-48"><a href="#cb18-48"></a>    OC2               <span class="fl">1.314</span>    <span class="fl">0.108</span>   <span class="fl">12.209</span>    <span class="fl">0.000</span>    <span class="fl">1.934</span>    <span class="fl">0.886</span></span>
+<span id="cb18-49"><a href="#cb18-49"></a>    OC3               <span class="fl">0.783</span>    <span class="fl">0.076</span>   <span class="fl">10.322</span>    <span class="fl">0.000</span>    <span class="fl">1.151</span>    <span class="fl">0.657</span></span>
+<span id="cb18-50"><a href="#cb18-50"></a>    OC4               <span class="fl">1.165</span>    <span class="fl">0.097</span>   <span class="fl">11.968</span>    <span class="fl">0.000</span>    <span class="fl">1.714</span>    <span class="fl">0.836</span></span>
+<span id="cb18-51"><a href="#cb18-51"></a></span>
+<span id="cb18-52"><a href="#cb18-52"></a>Covariances<span class="sc">:</span></span>
+<span id="cb18-53"><a href="#cb18-53"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb18-54"><a href="#cb18-54"></a>  SI <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-55"><a href="#cb18-55"></a>    JS                <span class="fl">0.161</span>    <span class="fl">0.042</span>    <span class="fl">3.834</span>    <span class="fl">0.000</span>    <span class="fl">0.230</span>    <span class="fl">0.230</span></span>
+<span id="cb18-56"><a href="#cb18-56"></a>    AC                <span class="fl">0.249</span>    <span class="fl">0.048</span>    <span class="fl">5.161</span>    <span class="fl">0.000</span>    <span class="fl">0.309</span>    <span class="fl">0.309</span></span>
+<span id="cb18-57"><a href="#cb18-57"></a>    EP                <span class="fl">0.502</span>    <span class="fl">0.065</span>    <span class="fl">7.733</span>    <span class="fl">0.000</span>    <span class="fl">0.562</span>    <span class="fl">0.562</span></span>
+<span id="cb18-58"><a href="#cb18-58"></a>    OC                <span class="fl">0.574</span>    <span class="fl">0.080</span>    <span class="fl">7.191</span>    <span class="fl">0.000</span>    <span class="fl">0.553</span>    <span class="fl">0.553</span></span>
+<span id="cb18-59"><a href="#cb18-59"></a>  JS <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-60"><a href="#cb18-60"></a>    AC                <span class="fl">0.057</span>    <span class="fl">0.065</span>    <span class="fl">0.868</span>    <span class="fl">0.386</span>    <span class="fl">0.050</span>    <span class="fl">0.050</span></span>
+<span id="cb18-61"><a href="#cb18-61"></a>    EP                <span class="fl">0.303</span>    <span class="fl">0.078</span>    <span class="fl">3.892</span>    <span class="fl">0.000</span>    <span class="fl">0.242</span>    <span class="fl">0.242</span></span>
+<span id="cb18-62"><a href="#cb18-62"></a>    OC                <span class="fl">0.304</span>    <span class="fl">0.090</span>    <span class="fl">3.390</span>    <span class="fl">0.001</span>    <span class="fl">0.209</span>    <span class="fl">0.209</span></span>
+<span id="cb18-63"><a href="#cb18-63"></a>  AC <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-64"><a href="#cb18-64"></a>    EP                <span class="fl">0.372</span>    <span class="fl">0.088</span>    <span class="fl">4.251</span>    <span class="fl">0.000</span>    <span class="fl">0.257</span>    <span class="fl">0.257</span></span>
+<span id="cb18-65"><a href="#cb18-65"></a>    OC                <span class="fl">0.517</span>    <span class="fl">0.107</span>    <span class="fl">4.842</span>    <span class="fl">0.000</span>    <span class="fl">0.307</span>    <span class="fl">0.307</span></span>
+<span id="cb18-66"><a href="#cb18-66"></a>  EP <span class="sc">~</span><span class="er">~</span>                                                                 </span>
+<span id="cb18-67"><a href="#cb18-67"></a>    OC                <span class="fl">0.925</span>    <span class="fl">0.143</span>    <span class="fl">6.469</span>    <span class="fl">0.000</span>    <span class="fl">0.497</span>    <span class="fl">0.497</span></span>
+<span id="cb18-68"><a href="#cb18-68"></a></span>
+<span id="cb18-69"><a href="#cb18-69"></a>Variances<span class="sc">:</span></span>
+<span id="cb18-70"><a href="#cb18-70"></a>                   Estimate  Std.Err  z<span class="sc">-</span>value  <span class="fu">P</span>(<span class="sc">&gt;</span><span class="er">|</span>z<span class="sc">|</span>)   Std.lv  Std.all</span>
+<span id="cb18-71"><a href="#cb18-71"></a>   .SI1               <span class="fl">0.258</span>    <span class="fl">0.023</span>   <span class="fl">11.121</span>    <span class="fl">0.000</span>    <span class="fl">0.258</span>    <span class="fl">0.342</span></span>
+<span id="cb18-72"><a href="#cb18-72"></a>   .SI2               <span class="fl">0.195</span>    <span class="fl">0.021</span>    <span class="fl">9.479</span>    <span class="fl">0.000</span>    <span class="fl">0.195</span>    <span class="fl">0.253</span></span>
+<span id="cb18-73"><a href="#cb18-73"></a>   .SI3               <span class="fl">0.464</span>    <span class="fl">0.038</span>   <span class="fl">12.264</span>    <span class="fl">0.000</span>    <span class="fl">0.464</span>    <span class="fl">0.451</span></span>
+<span id="cb18-74"><a href="#cb18-74"></a>   .SI4               <span class="fl">0.256</span>    <span class="fl">0.026</span>    <span class="fl">9.952</span>    <span class="fl">0.000</span>    <span class="fl">0.256</span>    <span class="fl">0.274</span></span>
+<span id="cb18-75"><a href="#cb18-75"></a>   .JS1               <span class="fl">0.807</span>    <span class="fl">0.074</span>   <span class="fl">10.960</span>    <span class="fl">0.000</span>    <span class="fl">0.807</span>    <span class="fl">0.451</span></span>
+<span id="cb18-76"><a href="#cb18-76"></a>   .JS2               <span class="fl">0.825</span>    <span class="fl">0.076</span>   <span class="fl">10.822</span>    <span class="fl">0.000</span>    <span class="fl">0.825</span>    <span class="fl">0.441</span></span>
+<span id="cb18-77"><a href="#cb18-77"></a>   .JS3               <span class="fl">0.930</span>    <span class="fl">0.078</span>   <span class="fl">11.910</span>    <span class="fl">0.000</span>    <span class="fl">0.930</span>    <span class="fl">0.538</span></span>
+<span id="cb18-78"><a href="#cb18-78"></a>   .JS4               <span class="fl">0.824</span>    <span class="fl">0.071</span>   <span class="fl">11.570</span>    <span class="fl">0.000</span>    <span class="fl">0.824</span>    <span class="fl">0.503</span></span>
+<span id="cb18-79"><a href="#cb18-79"></a>   .JS5             <span class="fl">196.867</span>   <span class="fl">17.681</span>   <span class="fl">11.135</span>    <span class="fl">0.000</span>  <span class="fl">196.867</span>    <span class="fl">0.465</span></span>
+<span id="cb18-80"><a href="#cb18-80"></a>   .AC1               <span class="fl">0.628</span>    <span class="fl">0.059</span>   <span class="fl">10.566</span>    <span class="fl">0.000</span>    <span class="fl">0.628</span>    <span class="fl">0.324</span></span>
+<span id="cb18-81"><a href="#cb18-81"></a>   .AC2               <span class="fl">0.973</span>    <span class="fl">0.092</span>   <span class="fl">10.617</span>    <span class="fl">0.000</span>    <span class="fl">0.973</span>    <span class="fl">0.327</span></span>
+<span id="cb18-82"><a href="#cb18-82"></a>   .AC3               <span class="fl">0.601</span>    <span class="fl">0.059</span>   <span class="fl">10.114</span>    <span class="fl">0.000</span>    <span class="fl">0.601</span>    <span class="fl">0.299</span></span>
+<span id="cb18-83"><a href="#cb18-83"></a>   .AC4               <span class="fl">0.867</span>    <span class="fl">0.081</span>   <span class="fl">10.742</span>    <span class="fl">0.000</span>    <span class="fl">0.867</span>    <span class="fl">0.335</span></span>
+<span id="cb18-84"><a href="#cb18-84"></a>   .EP1               <span class="fl">1.744</span>    <span class="fl">0.143</span>   <span class="fl">12.222</span>    <span class="fl">0.000</span>    <span class="fl">1.744</span>    <span class="fl">0.522</span></span>
+<span id="cb18-85"><a href="#cb18-85"></a>   .EP2               <span class="fl">0.937</span>    <span class="fl">0.091</span>   <span class="fl">10.245</span>    <span class="fl">0.000</span>    <span class="fl">0.937</span>    <span class="fl">0.354</span></span>
+<span id="cb18-86"><a href="#cb18-86"></a>   .EP3               <span class="fl">0.699</span>    <span class="fl">0.064</span>   <span class="fl">10.860</span>    <span class="fl">0.000</span>    <span class="fl">0.699</span>    <span class="fl">0.393</span></span>
+<span id="cb18-87"><a href="#cb18-87"></a>   .EP4               <span class="fl">0.637</span>    <span class="fl">0.066</span>    <span class="fl">9.659</span>    <span class="fl">0.000</span>    <span class="fl">0.637</span>    <span class="fl">0.323</span></span>
+<span id="cb18-88"><a href="#cb18-88"></a>   .OC1               <span class="fl">4.196</span>    <span class="fl">0.318</span>   <span class="fl">13.177</span>    <span class="fl">0.000</span>    <span class="fl">4.196</span>    <span class="fl">0.660</span></span>
+<span id="cb18-89"><a href="#cb18-89"></a>   .OC2               <span class="fl">1.029</span>    <span class="fl">0.149</span>    <span class="fl">6.929</span>    <span class="fl">0.000</span>    <span class="fl">1.029</span>    <span class="fl">0.216</span></span>
+<span id="cb18-90"><a href="#cb18-90"></a>   .OC3               <span class="fl">1.745</span>    <span class="fl">0.137</span>   <span class="fl">12.700</span>    <span class="fl">0.000</span>    <span class="fl">1.745</span>    <span class="fl">0.568</span></span>
+<span id="cb18-91"><a href="#cb18-91"></a>   .OC4               <span class="fl">1.267</span>    <span class="fl">0.138</span>    <span class="fl">9.193</span>    <span class="fl">0.000</span>    <span class="fl">1.267</span>    <span class="fl">0.301</span></span>
+<span id="cb18-92"><a href="#cb18-92"></a>    SI                <span class="fl">0.498</span>    <span class="fl">0.052</span>    <span class="fl">9.526</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb18-93"><a href="#cb18-93"></a>    JS                <span class="fl">0.981</span>    <span class="fl">0.122</span>    <span class="fl">8.038</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb18-94"><a href="#cb18-94"></a>    AC                <span class="fl">1.309</span>    <span class="fl">0.135</span>    <span class="fl">9.664</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb18-95"><a href="#cb18-95"></a>    EP                <span class="fl">1.600</span>    <span class="fl">0.214</span>    <span class="fl">7.471</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span>
+<span id="cb18-96"><a href="#cb18-96"></a>    OC                <span class="fl">2.164</span>    <span class="fl">0.357</span>    <span class="fl">6.058</span>    <span class="fl">0.000</span>    <span class="fl">1.000</span>    <span class="fl">1.000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fit-indices" class="slide level2">
+<h2>Fit indices</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<h4 id="goodness-of-fit-indices">Goodness of fit indices</h4>
+<ul>
+<li>Goodness-of-fit index (GFI)</li>
+<li>Adjusted goodness-fit-index (AGFI)</li>
+<li>Comparative fit index (CFI)</li>
+<li>Normed fit index (NFI)</li>
+<li>Non-normed fit index (NNF)</li>
+</ul>
+<h4 id="badness-of-fit-indices">Badness of fit indices</h4>
+<ul>
+<li>Standard root mean square of the residuals (SRMR)</li>
+<li>Root mean square error of approximation (RMSEA)</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="img/sample_gof.png"></p>
+</div>
+</div>
+
+<aside><div>
+<p>Sample GOF results from W. Shiau &amp; M. Luo (2013). Continuance intention of blog users: The impact of perceived enjoyment, habit, user involvement and blogging time.</p>
+</div></aside></section>
+<section id="fit-indices-1" class="slide level2">
+<h2>Fit indices</h2>
+<div class="columns">
+<div class="column">
+<h4 id="goodness-of-fit-indices-1">Goodness of fit indices</h4>
+<ul>
+<li><p>Goodness-of-fit index (GFI)</p></li>
+<li><p>Adjusted goodness-fit-index (AGFI)</p></li>
+<li><p>Comparative fit index (CFI)</p></li>
+<li><p>Normed fit index (NFI)</p></li>
+<li><p>Non-normed fit index (NNF)</p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">fitMeasures</span>(cfa_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">fitMeasures</span>(cfa_fit)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>                 npar                  fmin                 chisq </span>
+<span id="cb20-3"><a href="#cb20-3"></a>               <span class="fl">52.000</span>                 <span class="fl">0.301</span>               <span class="fl">240.738</span> </span>
+<span id="cb20-4"><a href="#cb20-4"></a>                   df                pvalue        baseline.chisq </span>
+<span id="cb20-5"><a href="#cb20-5"></a>              <span class="fl">179.000</span>                 <span class="fl">0.001</span>              <span class="fl">4452.567</span> </span>
+<span id="cb20-6"><a href="#cb20-6"></a>          baseline.df       baseline.pvalue                   cfi </span>
+<span id="cb20-7"><a href="#cb20-7"></a>              <span class="fl">210.000</span>                 <span class="fl">0.000</span>                 <span class="fl">0.985</span> </span>
+<span id="cb20-8"><a href="#cb20-8"></a>                  tli                  nnfi                   rfi </span>
+<span id="cb20-9"><a href="#cb20-9"></a>                <span class="fl">0.983</span>                 <span class="fl">0.983</span>                 <span class="fl">0.937</span> </span>
+<span id="cb20-10"><a href="#cb20-10"></a>                  nfi                  pnfi                   ifi </span>
+<span id="cb20-11"><a href="#cb20-11"></a>                <span class="fl">0.946</span>                 <span class="fl">0.806</span>                 <span class="fl">0.986</span> </span>
+<span id="cb20-12"><a href="#cb20-12"></a>                  rni                  logl     unrestricted.logl </span>
+<span id="cb20-13"><a href="#cb20-13"></a>                <span class="fl">0.985</span>            <span class="sc">-</span><span class="fl">13916.782</span>            <span class="sc">-</span><span class="fl">13796.413</span> </span>
+<span id="cb20-14"><a href="#cb20-14"></a>                  aic                   bic                ntotal </span>
+<span id="cb20-15"><a href="#cb20-15"></a>            <span class="fl">27937.564</span>             <span class="fl">28145.120</span>               <span class="fl">400.000</span> </span>
+<span id="cb20-16"><a href="#cb20-16"></a>                 bic2                 rmsea        rmsea.ci.lower </span>
+<span id="cb20-17"><a href="#cb20-17"></a>            <span class="fl">27980.120</span>                 <span class="fl">0.029</span>                 <span class="fl">0.019</span> </span>
+<span id="cb20-18"><a href="#cb20-18"></a>       rmsea.ci.upper        rmsea.ci.level          rmsea.pvalue </span>
+<span id="cb20-19"><a href="#cb20-19"></a>                <span class="fl">0.039</span>                 <span class="fl">0.900</span>                 <span class="fl">1.000</span> </span>
+<span id="cb20-20"><a href="#cb20-20"></a>       rmsea.close.h0 rmsea.notclose.pvalue     rmsea.notclose.h0 </span>
+<span id="cb20-21"><a href="#cb20-21"></a>                <span class="fl">0.050</span>                 <span class="fl">0.000</span>                 <span class="fl">0.080</span> </span>
+<span id="cb20-22"><a href="#cb20-22"></a>                  rmr            rmr_nomean                  srmr </span>
+<span id="cb20-23"><a href="#cb20-23"></a>                <span class="fl">0.414</span>                 <span class="fl">0.414</span>                 <span class="fl">0.036</span> </span>
+<span id="cb20-24"><a href="#cb20-24"></a>         srmr_bentler   srmr_bentler_nomean                  crmr </span>
+<span id="cb20-25"><a href="#cb20-25"></a>                <span class="fl">0.036</span>                 <span class="fl">0.036</span>                 <span class="fl">0.037</span> </span>
+<span id="cb20-26"><a href="#cb20-26"></a>          crmr_nomean            srmr_mplus     srmr_mplus_nomean </span>
+<span id="cb20-27"><a href="#cb20-27"></a>                <span class="fl">0.037</span>                 <span class="fl">0.036</span>                 <span class="fl">0.036</span> </span>
+<span id="cb20-28"><a href="#cb20-28"></a>                cn_05                 cn_01                   gfi </span>
+<span id="cb20-29"><a href="#cb20-29"></a>              <span class="fl">351.949</span>               <span class="fl">376.401</span>                 <span class="fl">0.947</span> </span>
+<span id="cb20-30"><a href="#cb20-30"></a>                 agfi                  pgfi                   mfi </span>
+<span id="cb20-31"><a href="#cb20-31"></a>                <span class="fl">0.932</span>                 <span class="fl">0.734</span>                 <span class="fl">0.926</span> </span>
+<span id="cb20-32"><a href="#cb20-32"></a>                 ecvi </span>
+<span id="cb20-33"><a href="#cb20-33"></a>                <span class="fl">0.862</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fit-indices-2" class="slide level2">
+<h2>Fit indices</h2>
+<div class="columns">
+<div class="column">
+<h4 id="goodness-of-fit-indices-2">Goodness of fit indices</h4>
+<ul>
+<li><p>Goodness-of-fit index (GFI)</p></li>
+<li><p>Adjusted goodness-fit-index (AGFI)</p></li>
+<li><p>Comparative fit index (CFI)</p></li>
+<li><p>Normed fit index (NFI)</p></li>
+<li><p>Non-normed fit index (NNF)</p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">fitMeasures</span>(cfa_fit,  <span class="at">fit.measures =</span> <span class="fu">c</span>(<span class="st">"gfi"</span>, <span class="st">"agfi"</span>, <span class="st">"cfi"</span>, <span class="st">"nfi"</span>, <span class="st">"nnfi"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">fitMeasures</span>(cfa_fit,  <span class="at">fit.measures =</span> <span class="fu">c</span>(<span class="st">"gfi"</span>, <span class="st">"agfi"</span>, <span class="st">"cfi"</span>, <span class="st">"nfi"</span>, <span class="st">"nnfi"</span>))</span>
+<span id="cb22-2"><a href="#cb22-2"></a>  gfi  agfi   cfi   nfi  nnfi </span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="fl">0.947</span> <span class="fl">0.932</span> <span class="fl">0.985</span> <span class="fl">0.946</span> <span class="fl">0.983</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fit-indices-3" class="slide level2">
+<h2>Fit indices</h2>
+<div class="columns">
+<div class="column">
+<h4 id="badness-of-fit-indices-1">Badness of fit indices</h4>
+<ul>
+<li><p>Standard root mean squrare residual (SRMR)</p></li>
+<li><p>Root mean square error of approximation (RMSEA)</p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">fitMeasures</span>(cfa_fit,  <span class="at">fit.measures =</span> <span class="fu">c</span>(<span class="st">"srmr"</span>, <span class="st">"rmsea"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">fitMeasures</span>(cfa_fit,  <span class="at">fit.measures =</span> <span class="fu">c</span>(<span class="st">"srmr"</span>, <span class="st">"rmsea"</span>))</span>
+<span id="cb24-2"><a href="#cb24-2"></a> srmr rmsea </span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="fl">0.036</span> <span class="fl">0.029</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reliability-and-validity-test" class="slide level2">
+<h2>Reliability and validity test</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<h4 id="reliability-test">Reliability test</h4>
+<ul>
+<li>Composite reliability</li>
+</ul>
+<h4 id="validity-test">Validity test</h4>
+<ul>
+<li><p>Convergent validity</p></li>
+<li><p>Discriminant validity</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reliability_validity.png"></p>
+</figure>
+</div>
+
+</div>
+</div>
+<aside><div>
+<p>Source: A. Hou, W. Shiau, &amp; R. Shang (2019). The involvement paradox. The role of cognitive absorption in mobile instant messaging user satisfaction.</p>
+</div></aside></section>
+<section id="reliability-and-validity-test-1" class="slide level2">
+<h2>Reliability and validity test</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li><p>Composite reliability: <code>alpha</code> &gt; <code>0.70</code></p></li>
+<li><p>Convergent validity: AVE (<code>avevar</code>) &gt; <code>0.50</code></p></li>
+<li><p>Discriminant validity: <code>omega</code> &gt; <code>0.7</code></p></li>
+</ul>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(semTools)</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">reliability</span>(cfa_fit) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>semTools<span class="sc">::</span><span class="fu">reliability</span>(cfa_fit) <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb26-2"><a href="#cb26-2"></a>          SI    JS    AC    EP    OC</span>
+<span id="cb26-3"><a href="#cb26-3"></a>alpha  <span class="fl">0.886</span> <span class="fl">0.281</span> <span class="fl">0.891</span> <span class="fl">0.847</span> <span class="fl">0.823</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a>omega  <span class="fl">0.887</span> <span class="fl">0.640</span> <span class="fl">0.893</span> <span class="fl">0.850</span> <span class="fl">0.827</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>omega2 <span class="fl">0.887</span> <span class="fl">0.640</span> <span class="fl">0.893</span> <span class="fl">0.850</span> <span class="fl">0.827</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a>omega3 <span class="fl">0.887</span> <span class="fl">0.641</span> <span class="fl">0.893</span> <span class="fl">0.850</span> <span class="fl">0.818</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a>avevar <span class="fl">0.664</span> <span class="fl">0.535</span> <span class="fl">0.677</span> <span class="fl">0.587</span> <span class="fl">0.552</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section></section>
+<section id="lets-practice-1" class="title-slide slide level1 center">
+<h1>Let’s practice</h1>
+
+</section>
+
+<section>
+<section id="step-4-specifying-the-structural-model" class="title-slide slide level1 center">
+<h1>Step 4: Specifying the structural model</h1>
+
+</section>
+<section id="cfa-model-to-structural-model" class="slide level2 center-text">
+<h2>CFA model to structural model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/cfa_sem.png" style="width:70.0%;height:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="defining-structural-model" class="slide level2">
+<h2>Defining structural model</h2>
+<h4 id="hypotheses">Hypotheses:</h4>
+<ul>
+<li><p>H1: Environmental perceptions are positively related to job satisfaction.</p></li>
+<li><p>H2: Environmental perceptions are positively related to organizational commitment.</p></li>
+<li><p>H3: Attitudes toward coworkers are positively related to job satisfaction.</p></li>
+<li><p>H4: Attitudes toward coworkers are positively related to organizational commitment.</p></li>
+<li><p>H5: Job satisfaction is related positively to organizational commitment.</p></li>
+<li><p>H6: Job satisfaction is related positively to staying intentions.</p></li>
+<li><p>H7: Organizational commitment is related positively to staying intention.</p></li>
+</ul>
+</section>
+<section id="defining-structural-model-1" class="slide level2 center-text">
+<h2>Defining structural model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/structural_model.png" style="width:80.0%;height:80.0%"></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="lets-practice-2" class="title-slide slide level1 center">
+<h1>Let’s practice</h1>
+
+</section>
+<section id="defining-structural-model-2" class="slide level2">
+<h2>Defining structural model</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">library</span>(semPlot)</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">semPaths</span>(<span class="at">object =</span> sem_fit,</span>
+<span id="cb27-3"><a href="#cb27-3"></a>         <span class="at">what =</span> <span class="st">"std"</span>,</span>
+<span id="cb27-4"><a href="#cb27-4"></a>         <span class="at">layout =</span> <span class="st">"tree2"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5"></a>         <span class="at">intercepts =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb27-6"><a href="#cb27-6"></a>         <span class="at">residuals =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/sempath2.svg"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="defining-structural-model-3" class="slide level2 center-text">
+<h2>Defining structural model</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/structural_result.svg" style="width:80.0%;height:80.0%"></p>
+</figure>
+</div>
+</section>
+<section id="gof-measures-between-structural-and-cfa-model" class="slide level2">
+<h2>GOF measures between structural and CFA model</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>gof_indices <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'chisq'</span>, <span class="st">'df'</span>,<span class="st">'pvalue'</span>, <span class="st">"gfi"</span>, </span>
+<span id="cb28-2"><a href="#cb28-2"></a>                 <span class="st">'rmsea'</span>, <span class="st">'rmr'</span>, <span class="st">'srmr'</span>, <span class="st">'nfi'</span>, </span>
+<span id="cb28-3"><a href="#cb28-3"></a>                 <span class="st">'nnfi'</span>, <span class="st">'cfi'</span>, <span class="st">'agfi'</span>)</span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="fu">fitmeasures</span>(sem_fit, <span class="at">fit.measures =</span> gof_indices)</span>
+<span id="cb28-5"><a href="#cb28-5"></a><span class="fu">fitmeasures</span>(cfa_fit, <span class="at">fit.measures =</span> gof_indices)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>gof_indices <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'chisq'</span>, <span class="st">'df'</span>,<span class="st">'pvalue'</span>, <span class="st">"gfi"</span>, </span>
+<span id="cb29-2"><a href="#cb29-2"></a>                 <span class="st">'rmsea'</span>, <span class="st">'rmr'</span>, <span class="st">'srmr'</span>, <span class="st">'nfi'</span>, </span>
+<span id="cb29-3"><a href="#cb29-3"></a>                 <span class="st">'nnfi'</span>, <span class="st">'cfi'</span>, <span class="st">'agfi'</span>)</span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="fu">fitmeasures</span>(sem_fit, <span class="at">fit.measures =</span> gof_indices)</span>
+<span id="cb29-5"><a href="#cb29-5"></a>  chisq      df  pvalue     gfi   rmsea     rmr    srmr     nfi    nnfi     cfi </span>
+<span id="cb29-6"><a href="#cb29-6"></a><span class="fl">287.179</span> <span class="fl">181.000</span>   <span class="fl">0.000</span>   <span class="fl">0.938</span>   <span class="fl">0.038</span>   <span class="fl">0.410</span>   <span class="fl">0.060</span>   <span class="fl">0.936</span>   <span class="fl">0.971</span>   <span class="fl">0.975</span> </span>
+<span id="cb29-7"><a href="#cb29-7"></a>   agfi </span>
+<span id="cb29-8"><a href="#cb29-8"></a>  <span class="fl">0.921</span> </span>
+<span id="cb29-9"><a href="#cb29-9"></a><span class="fu">fitmeasures</span>(cfa_fit, <span class="at">fit.measures =</span> gof_indices)</span>
+<span id="cb29-10"><a href="#cb29-10"></a>  chisq      df  pvalue     gfi   rmsea     rmr    srmr     nfi    nnfi     cfi </span>
+<span id="cb29-11"><a href="#cb29-11"></a><span class="fl">240.738</span> <span class="fl">179.000</span>   <span class="fl">0.001</span>   <span class="fl">0.947</span>   <span class="fl">0.029</span>   <span class="fl">0.414</span>   <span class="fl">0.036</span>   <span class="fl">0.946</span>   <span class="fl">0.983</span>   <span class="fl">0.985</span> </span>
+<span id="cb29-12"><a href="#cb29-12"></a>   agfi </span>
+<span id="cb29-13"><a href="#cb29-13"></a>  <span class="fl">0.932</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-right">
+<figure>
+<p><img data-src="img/fit_indices.png"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="whats-next" class="slide level2">
+<h2>What’s next?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><p>Modification indeces</p></li>
+<li><p>Handling heywood cases</p></li>
+<li><p>Comparing competing models</p></li>
+<li><p>Formative scales in SEM</p></li>
+<li><p>Higher-order factor analysis</p></li>
+<li><p>Multigroup analysis</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/we_can.gif"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section id="thank-you" class="title-slide slide level1 center">
+<h1>Thank you!</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Intro%20to%20SEM.png" style="width:40.0%;height:40.0%"></p>
+</figure>
+</div>
 <div class="footer footer-default">
 <p>CFA &amp; CB SEM</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 

@@ -492,6 +492,510 @@ cfa_fit %>% summary()
 
 
 
+## Summary output
+
+::: columns
+::: {.column width="30%"}
+
++ Overall results
+
++ Loadings
+
++ Variances
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit)
+```
+
+:::
+:::
+
+
+## Summary output
+
+::: columns
+::: {.column width="40%"}
+#### Overall results
+
++ Degrees of freedom (df)
+
+  + $df = \frac{1}{2} p (p + 1) - k$
+  + $p$ = total observed variables
+  + $k$ = total estimated parameters
+
++ Identification
+
+  + Include at least three manifest variables
+  + Create models with $df > 0$
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit)
+```
+
+:::
+:::
+
+
+## Summary output
+
+::: columns
+::: {.column width="30%"}
+#### Loadings
+
++ Measures the strength of the relationship between items and factor.
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit, standardized = TRUE)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit, standardized = TRUE)
+```
+
+:::
+:::
+
+
+## Summary output
+
+::: columns
+::: {.column width="30%"}
+#### Variances
+
+Refer to unique variance that the factor unable to account for. Similar to error term in OLS, hence it is also term as error variance.
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit, standardized = TRUE)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+cfa_fit <- cfa(cfa_model, data = hbat_data)
+summary(cfa_fit, standardized = TRUE)
+```
+:::
+:::
+
+
+## Fit indices
+
+::: columns
+::: {.column width="40%"}
+#### Goodness of fit indices
+
++ Goodness-of-fit index (GFI)
++ Adjusted goodness-fit-index (AGFI)
++ Comparative fit index (CFI)
++ Normed fit index (NFI)
++ Non-normed fit index (NNF)
+
+#### Badness of fit indices
+
++ Standard root mean square of the residuals (SRMR)
++ Root mean square error of approximation (RMSEA)
+:::
+
+::: {.column width="60%"}
+![](img/sample_gof.png)
+:::
+:::
+
+::: aside
+Sample GOF results from W. Shiau & M. Luo (2013). Continuance intention of blog users: The impact of perceived enjoyment, habit, user involvement and blogging time.
+:::
+
+
+
+
+## Fit indices
+
+
+::: columns
+::: {.column}
+#### Goodness of fit indices
+
++ Goodness-of-fit index (GFI)
+
++ Adjusted goodness-fit-index (AGFI)
+
++ Comparative fit index (CFI)
+
++ Normed fit index (NFI)
+
++ Non-normed fit index (NNF)
+:::
+
+::: {.column}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit)
+```
+
+:::
+:::
+
+
+## Fit indices
+
+::: columns
+::: {.column}
+#### Goodness of fit indices
+
++ Goodness-of-fit index (GFI)
+
++ Adjusted goodness-fit-index (AGFI)
+
++ Comparative fit index (CFI)
+
++ Normed fit index (NFI)
+
++ Non-normed fit index (NNF)
+:::
+
+::: {.column}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit,  fit.measures = c("gfi", "agfi", "cfi", "nfi", "nnfi"))
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit,  fit.measures = c("gfi", "agfi", "cfi", "nfi", "nnfi"))
+```
+
+:::
+:::
+
+
+## Fit indices
+
+::: columns
+::: {.column}
+#### Badness of fit indices
+
++ Standard root mean squrare residual (SRMR)
+
++ Root mean square error of approximation (RMSEA)
+:::
+
+::: {.column}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit,  fit.measures = c("srmr", "rmsea"))
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+fitMeasures(cfa_fit,  fit.measures = c("srmr", "rmsea"))
+```
+:::
+:::
+
+
+## Reliability and validity test
+
+::: columns
+::: {.column width="40%"}
+#### Reliability test
+
++ Composite reliability
+
+#### Validity test
+
++ Convergent validity
+
++ Discriminant validity
+:::
+
+::: {.column width="60%"}
+![](img/reliability_validity.png){fig-align="center"}
+
+::: aside
+Source: A. Hou, W. Shiau, & R. Shang (2019). The involvement paradox. The role of cognitive absorption in mobile instant messaging user satisfaction.
+:::
+
+:::
+:::
+
+
+## Reliability and validity test
+
+::: columns
+::: {.column}
++ Composite reliability: `alpha` > `0.70`
+
++ Convergent validity: AVE (`avevar`) > `0.50`
+
++ Discriminant validity: `omega` > `0.7`
+:::
+
+::: {.column}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+library(semTools)
+reliability(cfa_fit) %>% round(3)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+semTools::reliability(cfa_fit) %>% round(3)
+```
+
+:::
+:::
+
+
+# Let's practice
+
+
+# Step 4: Specifying the structural model
+
+
+## CFA model to structural model {.center-text}
+
+![](img/cfa_sem.png){fig-align="center" width=70% height=70%}
+
+
+## Defining structural model
+
+#### Hypotheses:
+
++ H1: Environmental perceptions are positively related to job satisfaction.
+
++ H2: Environmental perceptions are positively related to organizational commitment.
+
++ H3: Attitudes toward coworkers are positively related to job satisfaction.
+
++ H4: Attitudes toward coworkers are positively related to organizational commitment.
+
++ H5: Job satisfaction is related positively to organizational commitment.
+
++ H6: Job satisfaction is related  positively to staying intentions.
+
++ H7: Organizational commitment is related positively to staying intention.
+
+
+## Defining structural model {.center-text}
+
+![](img/structural_model.png){fig-align="center" width=80% height=80%}
+
+
+# Let's practice
+
+
+## Defining structural model
+
+::: columns
+::: {.column width="30%"}
+```{r}
+#| echo: false
+
+sem_model <- "SI =~ SI1 + SI2 + SI3 + SI4
+              JS =~ JS1 + JS2 + JS3 + JS4 + JS5
+              AC =~ AC1 + AC2 + AC3 + AC4
+              EP =~ EP1 + EP2 + EP3 + EP4
+              OC =~ OC1 + OC2 + OC3 + OC4
+              EP ~~ AC
+              JS ~ H1*EP + H3*AC
+              OC ~ H2*EP + H4*AC + H5*JS
+              SI ~ H6*JS + H7*OC"
+
+sem_fit <- sem(model = sem_model, data = hbat_data)
+```
+
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+library(semPlot)
+semPaths(object = sem_fit,
+         what = "std",
+         layout = "tree2",
+         intercepts = FALSE,
+         residuals = FALSE)
+```
+:::
+
+::: {.column width="70%"}
+![](img/sempath2.svg){fig-align="center"}
+:::
+:::
+
+
+## Defining structural model {.center-text}
+
+![](img/structural_result.svg){fig-align="center" width=80% height=80%}
+
+
+## GOF measures between structural and CFA model
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| echo: true
+#| eval: false
+#| class-output: "remark-code"
+
+gof_indices <- c('chisq', 'df','pvalue', "gfi", 
+                 'rmsea', 'rmr', 'srmr', 'nfi', 
+                 'nnfi', 'cfi', 'agfi')
+fitmeasures(sem_fit, fit.measures = gof_indices)
+fitmeasures(cfa_fit, fit.measures = gof_indices)
+```
+<br>
+```{r}
+#| echo: true
+#| class-output: "remark-code"
+
+gof_indices <- c('chisq', 'df','pvalue', "gfi", 
+                 'rmsea', 'rmr', 'srmr', 'nfi', 
+                 'nnfi', 'cfi', 'agfi')
+fitmeasures(sem_fit, fit.measures = gof_indices)
+fitmeasures(cfa_fit, fit.measures = gof_indices)
+```
+:::
+
+::: {.column width="60%"}
+![](img/fit_indices.png){fig-align="right"}
+:::
+:::
+
+
+
+## What's next?
+
+::: columns
+::: {.column width="40%"}
++ Modification indeces
+
++ Handling heywood cases
+
++ Comparing competing models
+
++ Formative scales in SEM
+
++ Higher-order factor analysis
+
++ Multigroup analysis
+:::
+
+::: {.column width="60%"}
+![](img/we_can.gif){fig-align="center"}
+:::
+:::
+
+
+# Thank you!
+
+![](img/Intro to SEM.png){fig-align="center" height=40% width=40%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
